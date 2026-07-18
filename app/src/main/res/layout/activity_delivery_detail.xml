@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sakura_gradient"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mis Pedidos"
+            android:textColor="#8C1F45"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:background="@drawable/bg_button_secondary"
+            android:text="Actualizar"
+            android:textColor="#8C1F45"
+            android:textSize="9sp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <!-- Empty state message -->
+        <TextView
+            android:id="@+id/tvEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No tienes pedidos asignados."
+            android:textColor="#9C8E80"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Active Order Container -->
+        <LinearLayout
+            android:id="@+id/containerActiveOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="12dp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvClientName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente: Juan Perez"
+                    android:textColor="#3D252C"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion: Av. Principal 123"
+                    android:textColor="#5C5045"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items: 2x Americano"
+                    android:textColor="#5C5045"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: $120.00"
+                    android:textColor="#8C1F45"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- PROPUESTO / OFRECIDO ACTIONS -->
+            <LinearLayout
+                android:id="@+id/containerProposalActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnAcceptOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_button"
+                    android:text="Aceptar Pedido"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginBottom="6dp" />
+
+                <Button
+                    android:id="@+id/btnDeclineOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_button_decline"
+                    android:text="Rechazar"
+                    android:textColor="#DC3545"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginBottom="8dp" />
+            </LinearLayout>
+
+            <!-- EN CAMINO / ENTREGADO ACTIONS -->
+            <LinearLayout
+                android:id="@+id/containerDeliveryActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/btnStartRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="#007bff"
+                    android:text="Empezar Ruta"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginBottom="6dp" />
+
+                <Button
+                    android:id="@+id/btnCompleteDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="#28a745"
+                    android:text="Completar Entrega"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_button_secondary"
+            android:text="Volver"
+            android:textColor="#8C1F45"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+</ScrollView>
