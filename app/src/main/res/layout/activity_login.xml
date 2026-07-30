@@ -11,55 +11,67 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="20dp">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp">
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sakura Café"
-            android:textColor="#8C1F45"
+            android:text="Sakura Coffee"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="14dp" />
+            android:letterSpacing="0.03"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repartidores"
+            android:textColor="#F4C2CB"
+            android:textSize="10sp"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="38dp"
             android:background="@drawable/bg_input"
-            android:hint="Email"
+            android:hint="Correo Electronico"
             android:inputType="textEmailAddress"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#3D252C"
-            android:textColorHint="#9C8E80" />
+            android:textColor="#4A2E2B"
+            android:textColorHint="#9C8A88" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="38dp"
             android:background="@drawable/bg_input"
             android:hint="Contrasena"
             android:inputType="textPassword"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
-            android:layout_marginBottom="14dp"
-            android:textColor="#3D252C"
-            android:textColorHint="#9C8E80" />
+            android:layout_marginBottom="12dp"
+            android:textColor="#4A2E2B"
+            android:textColorHint="#9C8A88" />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="38dp"
             android:background="@drawable/bg_button"
             android:text="Ingresar"
             android:textColor="#FFFFFF"
-            android:textSize="13sp"
+            android:textSize="12sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle" />
 

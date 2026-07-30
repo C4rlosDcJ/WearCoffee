@@ -11,27 +11,32 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="16dp">
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sensores"
-            android:textColor="#8C1F45"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="8dp" />
 
+        <!-- Sensor Card Principal (Ritmo Cardíaco, Batería, GPS) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_card"
-            android:padding="12dp"
+            android:padding="10dp"
             android:gravity="center_horizontal"
             android:layout_marginBottom="10dp">
 
+            <!-- Ritmo Cardíaco -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,10 +46,9 @@
 
                 <ImageView
                     android:id="@+id/ivHeart"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/star_on"
-                    android:tint="#FF0000"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_heart_pulse"
                     android:layout_marginRight="6dp" />
 
                 <TextView
@@ -52,38 +56,68 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-- lpm"
-                    android:textColor="#3D252C"
+                    android:textColor="#4A2E2B"
                     android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvBattery"
+            <!-- Batería -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bateria: --%"
-                android:textColor="#5C5045"
-                android:textSize="11sp"
-                android:layout_marginBottom="6dp" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="6dp">
 
-            <TextView
-                android:id="@+id/tvLocation"
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_battery"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tvBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bateria: --%"
+                    android:textColor="#6E4D48"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Ubicación GPS -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="GPS: --, --"
-                android:textColor="#5C5045"
-                android:textSize="9sp"
-                android:gravity="center" />
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginRight="4dp" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GPS: --, --"
+                    android:textColor="#6E4D48"
+                    android:textSize="9sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="32dp"
             android:background="@drawable/bg_button_secondary"
             android:text="Volver"
-            android:textColor="#8C1F45"
-            android:textSize="12sp"
+            android:textColor="#D9526B"
+            android:textSize="11sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle" />
 

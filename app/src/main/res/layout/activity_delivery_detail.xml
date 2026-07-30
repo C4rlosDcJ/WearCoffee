@@ -11,16 +11,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="16dp">
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mis Pedidos"
-            android:textColor="#8C1F45"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="4dp" />
 
         <Button
@@ -29,26 +32,27 @@
             android:layout_height="26dp"
             android:background="@drawable/bg_button_secondary"
             android:text="Actualizar"
-            android:textColor="#8C1F45"
+            android:textColor="#D9526B"
             android:textSize="9sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle"
             android:layout_marginBottom="8dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
 
-        <!-- Empty state message -->
+        <!-- Mensaje de estado vacío -->
         <TextView
             android:id="@+id/tvEmptyState"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No tienes pedidos asignados."
-            android:textColor="#9C8E80"
+            android:textColor="#F4C2CB"
             android:textSize="11sp"
             android:visibility="gone"
             android:layout_marginBottom="12dp" />
 
-        <!-- Active Order Container -->
+        <!-- Contenedor de Pedido Activo -->
         <LinearLayout
             android:id="@+id/containerActiveOrder"
             android:layout_width="match_parent"
@@ -62,26 +66,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/bg_card"
-                android:padding="12dp"
+                android:padding="10dp"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/tvClientName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cliente: Juan Perez"
-                    android:textColor="#3D252C"
+                    android:textColor="#4A2E2B"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="2dp" />
+                    android:layout_marginBottom="3dp" />
 
                 <TextView
                     android:id="@+id/tvAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Direccion: Av. Principal 123"
-                    android:textColor="#5C5045"
+                    android:text="Dirección: Av. Principal 123"
+                    android:textColor="#6E4D48"
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginBottom="4dp" />
@@ -91,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Items: 2x Americano"
-                    android:textColor="#5C5045"
+                    android:textColor="#6E4D48"
                     android:textSize="9sp"
                     android:gravity="center"
                     android:layout_marginBottom="6dp" />
@@ -101,12 +105,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total: $120.00"
-                    android:textColor="#8C1F45"
-                    android:textSize="12sp"
+                    android:textColor="#D9526B"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- PROPUESTO / OFRECIDO ACTIONS -->
+            <!-- Acciones Propuesto/Ofrecido -->
             <LinearLayout
                 android:id="@+id/containerProposalActions"
                 android:layout_width="match_parent"
@@ -118,11 +122,12 @@
                 <Button
                     android:id="@+id/btnAcceptOffer"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
+                    android:layout_height="34dp"
                     android:background="@drawable/bg_button"
                     android:text="Aceptar Pedido"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     android:textAllCaps="false"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_marginBottom="6dp" />
@@ -130,17 +135,18 @@
                 <Button
                     android:id="@+id/btnDeclineOffer"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
+                    android:layout_height="34dp"
                     android:background="@drawable/bg_button_decline"
                     android:text="Rechazar"
-                    android:textColor="#DC3545"
+                    android:textColor="#D32F2F"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     android:textAllCaps="false"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_marginBottom="8dp" />
             </LinearLayout>
 
-            <!-- EN CAMINO / ENTREGADO ACTIONS -->
+            <!-- Acciones En Camino / Entregado -->
             <LinearLayout
                 android:id="@+id/containerDeliveryActions"
                 android:layout_width="match_parent"
@@ -152,12 +158,12 @@
                 <Button
                     android:id="@+id/btnStartRoute"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_button"
-                    android:backgroundTint="#007bff"
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_button_start_route"
                     android:text="Empezar Ruta"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     android:textAllCaps="false"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_marginBottom="6dp" />
@@ -165,15 +171,15 @@
                 <Button
                     android:id="@+id/btnCompleteDelivery"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_button"
-                    android:backgroundTint="#28a745"
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_button_complete"
                     android:text="Completar Entrega"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     android:textAllCaps="false"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginBottom="8dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -181,11 +187,12 @@
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="32dp"
             android:background="@drawable/bg_button_secondary"
             android:text="Volver"
-            android:textColor="#8C1F45"
-            android:textSize="12sp"
+            android:textColor="#D9526B"
+            android:textSize="11sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle" />
 

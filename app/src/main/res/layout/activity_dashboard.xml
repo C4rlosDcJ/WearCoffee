@@ -11,71 +11,79 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="16dp">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp">
 
+        <!-- Card de Bienvenida -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_card"
-            android:padding="12dp"
+            android:padding="10dp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="12dp">
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bienvenido"
-                android:textColor="#5C5045"
-                android:textSize="11sp" />
+                android:textColor="#6E4D48"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/tvRepartidorName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Repartidor"
-                android:textColor="#8C1F45"
-                android:textSize="14sp"
+                android:textColor="#D9526B"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 android:ellipsize="end"
                 android:maxLines="1" />
         </LinearLayout>
 
+        <!-- Botones de navegación -->
         <Button
             android:id="@+id/btnPedidos"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="36dp"
             android:background="@drawable/bg_button"
             android:text="Ver Pedidos"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_marginBottom="6dp" />
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btnSensores"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="36dp"
             android:background="@drawable/bg_button_secondary"
             android:text="Ver Sensores"
-            android:textColor="#8C1F45"
+            android:textColor="#D9526B"
             android:textSize="12sp"
+            android:textStyle="bold"
             android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:backgroundTint="#dc3545"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_button_danger"
             android:text="Salir"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle" />
 
     </LinearLayout>
 </ScrollView>
